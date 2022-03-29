@@ -95,11 +95,23 @@ namespace CollectionsMasterConsoleUI
             {
                 if (item % 3 == 0)
                 {
-                    numbers[counter] = 0;
+                    numbers[counter++] = 0;
                 }
-                counter++;
             }
         }
+
+        /*
+        private static void ThreeKiller2(int[] numbers)
+        {
+            for(var i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i] % 3 == 0)
+                {
+                    numbers[i] = 0;
+                }
+            }
+            NumberPrinter(numbers);
+        } */
 
         private static void OddKiller(List<int> numberList) //try with just a for loop
         {
@@ -110,6 +122,15 @@ namespace CollectionsMasterConsoleUI
                     Console.WriteLine(item);
                 }
             }
+            /*
+             * for(var i = numberList.Count - 1; i >= 0; i--)
+             * {
+             *      if(numberList[i] % 2 == 0)
+             *      {
+             *          numberList.Remove(numberList[i]);
+             *      }
+             * }
+             */
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
@@ -155,6 +176,20 @@ namespace CollectionsMasterConsoleUI
                 array[array.Length - 1 - i] = arrayCopy;
             }
         }
+
+
+        /* private static void ReverseArray2(int[] array)
+        {
+            var reversed = new int[array.Length];
+            var counter = 0;
+
+            for(var i = array.Length - 1; i >= 0; i--)
+            {
+                reversed[counter++] = array[i];
+            }
+
+            NumberPrinter(reversed);
+        } */
 
 
         /// <summary>
